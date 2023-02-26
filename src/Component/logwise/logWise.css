@@ -1,0 +1,115 @@
+.main-area {
+    text-align: center;
+    width: 130%;
+    height: 1106px;
+    left: 0px;
+    background-color: #292C42;
+    right: 0px;
+    margin-top: 9px;
+  }
+  
+
+.logWise form label:first-child {
+    color: White;
+    font-size: Larger;
+    font-weight: bold;
+    border-style: none;
+    border-color: inherit;
+    border-width: inherit;
+    position: absolute;
+    left: 4px;
+    top: 130px;
+    width: 168px;
+    height: 36px;
+    padding: 5px;
+    
+}
+
+.logWise select{
+  font-size: Larger;
+    border-style: solid;
+    border-color: inherit;
+    border-width: inherit;
+    position: absolute;
+    top: 130px;
+    left: 147px;
+    width: 342px;
+    height: 40px;
+    margin-left: 50px;
+    border: none;
+    
+
+}
+
+.logWise form label {
+    color: White;
+    font-size: Larger;
+    font-weight: bold;
+    border-style: none;
+    border-color: inherit;
+    border-width: inherit;
+    position: absolute;
+    left: 40%;
+    top: 130px;
+    width: 168px;
+    height: 32px;
+    padding: 5px;
+    
+}
+
+.logWise form input {
+    color: black;
+    font-size: Larger;
+    font-weight: bold;
+    border-style: none;
+    border-color: inherit;
+    border-width: inherit;
+    position: absolute;
+    left: 50%;
+    top: 130px;
+    width: 168px;
+    height: 32px;
+    padding: 5px;
+    border: none;
+    
+}
+
+.button {
+    border-radius: 4px;
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    padding: 8px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-left: 200px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
