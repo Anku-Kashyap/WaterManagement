@@ -45,12 +45,12 @@
 
 }
 
-.station label{
+.instant-station label{
   margin-left: 700px;
 
 }
 
-.station select{
+.instant-station select{
   margin-left: 750px;
 
 }
@@ -344,7 +344,7 @@
     text-align: left;
 }
 
-.data-point1{
+.instant-data-point1{
     color: White;
     background-color: Black;
     font-size: Larger;
@@ -359,7 +359,7 @@
     height: 30px
 }
 
-.data-point2 {
+.instant-data-point2 {
   color: White;
   background-color: Black;
   font-size: Larger;
@@ -374,7 +374,7 @@
   height: 30px
 }
 
-.data-point3 {
+.instant-data-point3 {
   color: Black;
   background-color: White;
   font-size: Larger;
@@ -388,4 +388,38 @@
   width: 115px;
   height: 28px;
   bottom: 233px
+}
+
+
+
+.instant-btn-group button {
+  background-color: green; 
+  border: solid 1px grey; 
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: white; 
+  padding: 10px 24px; 
+  cursor: pointer;
+  float: left; 
+  margin-left:20px;
+  margin-top: 50%;
+  width:15%;
+}
+
+/* Clear floats (clearfix hack) */
+.instant-btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.instant-btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.instant-btn-group button:hover {
+  background-color: white;
+  color: green;
 }

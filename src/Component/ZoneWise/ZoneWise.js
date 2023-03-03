@@ -1,5 +1,6 @@
 import React from 'react';
 import './ZoneWise.css';
+import { Outlet, Link } from "react-router-dom";
 
 function ZoneWise() {
   return (
@@ -18,6 +19,27 @@ function ZoneWise() {
         <span className="data-point12">0.0 Kg/Cm2</span>
         <span className="data-point13">0.0 m3/h</span>
         <span className="data-point14">0.0 m3</span>
+
+        <div className="zonewise-btn-group">
+          <Link to="/second">
+            <button>Instantaneous</button>
+          </Link>
+          <Link to="/">
+            <button>Instantaneous at a glance</button>
+          </Link>
+          <Link to="/third">
+            <button>Log of Pressure</button>
+          </Link>
+          <Link to="/four">
+            <button>LogBook</button>
+          </Link>
+          <Link to="#">
+            <button>Zonewise pressure of Pratitnagar</button>
+          </Link>
+          <Link to="#">
+            <button>Zonewise pressure of Nathuawla</button>
+          </Link>
+        </div>
 
     </div>
   )

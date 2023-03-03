@@ -1,8 +1,26 @@
 import React from "react";
 import "./Instant.css";
-import Dropdown from "react-bootstrap/Dropdown";
+import { Link } from "react-router-dom";
+import JsonData from '../Data/data.json';
+import {useState} from "react";
 
 function Instant() {
+
+  const [tag,setTag] = useState(0);
+  const DisplayData = () =>  JsonData.map((info) => {
+    return (
+      <tr>
+        <td>{!tag ? setTag(info.Value) : null}</td>
+        <td>{console.log(info.Value)}</td>
+        <td>{console.log(info.joindate)}</td>
+      </tr>
+    );
+  });
+
+  DisplayData();
+
+  
+
   return (
     <>
       <div className="main-area">
@@ -15,7 +33,7 @@ function Instant() {
               <option value="NATHUAWALA">NATHUAWALA</option>
             </select>
           </div>
-          <div className="station">
+          <div className="instant-station">
             <label for="station">Station Name :-</label>
             <select name="station" id="station">
               <option value="1 - Office">1 - Office</option>
@@ -175,9 +193,23 @@ function Instant() {
               </tr>
             </table>
           </div>
-          <span className="data-point1">0.0</span>
-          <span className="data-point2">0.0</span>
-          <span className="data-point3">0.0</span>
+          <span className="instant-data-point1">{tag}</span>
+          <span className="instant-data-point2">0.0</span>
+          <span className="instant-data-point3">0.0</span>
+        </div>
+        <div className="instant-btn-group">
+          <Link to="/">
+            <button>Instantaneous at a glance</button>
+          </Link>
+          <Link to="/first">
+            <button>Zone wise pressure</button>
+          </Link>
+          <Link to="/third">
+            <button>Log of Pressure</button>
+          </Link>
+          <Link to="/four">
+            <button>LogBook</button>
+          </Link>
         </div>
       </div>
     </>

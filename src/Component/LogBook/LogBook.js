@@ -1,5 +1,6 @@
 import React from "react";
 import "./LogBook.css";
+import { Link } from "react-router-dom";
 
 function LogBook() {
   return (
@@ -12,31 +13,37 @@ function LogBook() {
             <option value="PRATITNAGAR">PRATITNAGAR</option>
             <option value="NATHUAWALA">NATHUAWALA</option>
           </select>
-          <label id="station" for="station">Station :-</label>
-          <select id="station">
-            <option value="KAHRAKMAFF">KAHRAKMAFF</option>
-            <option value="PRATITNAGAR">PRATITNAGAR</option>
-            <option value="NATHUAWALA">NATHUAWALA</option>
-          </select>
-          <label for="birthday">From:</label>
-          <input type="date" id="date" name="date" />
-          <label for="birthday">To:</label>
-          <input type="date" id="date" name="date" />
-          {/* <select name="Tubewell" id="division">
-            <option value="KAHRAKMAFF">Tubewell</option>
-            <option value="PRATITNAGAR">PRATITNAGAR</option>
-          </select> */}
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-          <label for="vehicle1"> Hourly</label>
-          <button class="button">
-            <span>SUBMIT </span>
-          </button>
-          <button class="button">
-            <span>Export to Excel </span>
-          </button>
-          <button class="button">
-            <span>Instantaneous at a glace </span>
-          </button>
+          <div className="station">
+            <label for="station">Station :-</label>
+            <select id="station">
+              <option value="KAHRAKMAFF">KAHRAKMAFF</option>
+              <option value="PRATITNAGAR">PRATITNAGAR</option>
+              <option value="NATHUAWALA">NATHUAWALA</option>
+            </select>
+          </div>
+          <div className="from-date">
+            <label for="birthday">From:</label>
+            <input type="date" id="date" name="date" />
+          </div>
+          <div className="to-date">
+            <label for="birthday">To:</label>
+            <input type="date" id="date" name="date" />
+          </div>
+          <div className="Tubewell">
+            <select name="Tubewell">
+              <option value="KAHRAKMAFF">Tubewell</option>
+              <option value="PRATITNAGAR">PRATITNAGAR</option>
+            </select>
+          </div>
+          <div className="hourly">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+            <label for="vehicle1"> Hourly</label>
+          </div>
+          <div className="logBook-btn-group">
+            <button>SUBMIT</button>
+            <button>Export to Excel</button>
+            <Link to="/"><button>Instantaneous at a glance</button></Link>
+          </div>
         </form>
       </div>
     </div>
