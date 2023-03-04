@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import JsonData from "../Data/data.json";
 import { useState, useEffect } from "react";
 
-function ZoneWise() {
+function ZoneWisePratitnagar() {
   const [allValues, setAllValues] = useState({
     tag0: "",
     tag1: "",
@@ -47,7 +47,7 @@ function ZoneWise() {
   DisplayData();
 
   return (
-    <div className="zone-wise-area">
+    <div className="zone-wise-area-Pratitnagar">
       <span className="data-point1">{allValues.tag0} m</span>
       <span className="data-point2">{allValues.tag1} m3</span>
       <span className="data-point3">{allValues.tag2} m3/h</span>
@@ -76,8 +76,8 @@ function ZoneWise() {
         <Link to="/four">
           <button>LogBook</button>
         </Link>
-        <Link to="/pratitnagar">
-          <button>Zonewise pressure of Pratitnagar</button>
+        <Link to="/first">
+          <button>Zonewise pressure of Kharakmaaf</button>
         </Link>
         <Link to="/nathuawala">
           <button>Zonewise pressure of Nathuawla</button>
@@ -87,4 +87,4 @@ function ZoneWise() {
   );
 }
 
-export default ZoneWise;
+export default ZoneWisePratitnagar;

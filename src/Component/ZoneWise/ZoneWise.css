@@ -9,6 +9,30 @@
     height: 1160px;
   }
 
+  .zone-wise-area-Pratitnagar
+  {
+    background-image: url(/src/images/pratitnagar.png);
+    background-repeat: no-repeat;
+    border-width: 0px;
+    position: absolute;
+    top: 110px;
+    left: 10px;
+    width: 2000px;
+    height: 1160px;
+  }
+
+  .zone-wise-area-nathuawala
+  {
+    background-image: url(/src/images/nathuawala.png);
+    background-repeat: no-repeat;
+    border-width: 0px;
+    position: absolute;
+    top: 110px;
+    left: 10px;
+    width: 2000px;
+    height: 1160px;
+  }
+
 .data-point1{
     color: black;
     background-color: white;

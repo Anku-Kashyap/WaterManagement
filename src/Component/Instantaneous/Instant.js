@@ -1,25 +1,152 @@
 import React from "react";
 import "./Instant.css";
 import { Link } from "react-router-dom";
-import JsonData from '../Data/data.json';
-import {useState} from "react";
+import JsonData from "../Data/data.json";
+import { useState, useEffect } from "react";
 
 function Instant() {
+  const [allValues, setAllValues] = useState({
+    tag0: "",
+    tag1: "",
+    tag2: "",
+    tag3: "",
+    tag4: "",
+    tag5: "",
+    tag6: "",
+    tag7: "",
+    tag8: "",
+    tag9: "",
 
-  const [tag,setTag] = useState(0);
-  const DisplayData = () =>  JsonData.map((info) => {
-    return (
-      <tr>
-        <td>{!tag ? setTag(info.Value) : null}</td>
-        <td>{console.log(info.Value)}</td>
-        <td>{console.log(info.joindate)}</td>
-      </tr>
-    );
+    tag10: "set",
+    tag11: "",
+    tag12: "",
+    tag13: "",
+
+    tag14: "",
+    tag15: "",
+    tag16: "",
+    tag17: "",
+    tag18: "",
+
+    tag19: "",
+    tag20: "",
+    tag21: "",
+    tag22: "",
+    tag23: "",
+    tag24: "",
+
+    tag25: "",
+    tag26: "",
+    tag27: "",
+    tag28: "",
+
+    tag29: "",
+    tag30: "",
+    tag31: "",
+
+    tag32: "",
+    
+
+
   });
 
-  DisplayData();
+  const DisplayData = () =>
+    JsonData.map((info) => {
+      return (
+        <>
+          {info.Name === "tag0" ? (allValues.tag0 = info.Value) : null}
+          {info.Name === "tag1" ? (allValues.tag1 = info.Value) : null}
+          {info.Name === "tag2" ? (allValues.tag2 = info.Value) : null}
+          {info.Name === "tag3" ? (allValues.tag3 = info.Value) : null}
+          {info.Name === "tag4" ? (allValues.tag4 = info.Value) : null}
+          {info.Name === "tag5" ? (allValues.tag5 = info.Value) : null}
+          {info.Name === "tag6" ? (allValues.tag6 = info.Value) : null}
+          {info.Name === "tag7" ? (allValues.tag7 = info.Value) : null}
+          {info.Name === "tag8" ? (allValues.tag8 = info.Value) : null}
+          {info.Name === "tag9" ? (allValues.tag9 = info.Value) : null}
 
-  
+          {info.Name === "tag10" ? (allValues.tag10 = info.Value) : null}
+          {info.Name === "tag11" ? (allValues.tag11 = info.Value) : null}
+          {info.Name === "tag12" ? (allValues.tag12 = info.Value) : null}
+          {info.Name === "tag13" ? (allValues.tag13 = info.Value) : null}
+
+          {info.Name === "tag14" ? (allValues.tag14 = info.Value) : null}
+          {info.Name === "tag15" ? (allValues.tag15 = info.Value) : null}
+          {info.Name === "tag16" ? (allValues.tag16 = info.Value) : null}
+          {info.Name === "tag17" ? (allValues.tag17 = info.Value) : null}
+          {info.Name === "tag18" ? (allValues.tag18 = info.Value) : null}
+
+          {info.Name === "tag19" ? (allValues.tag19 = info.Value) : null}
+          {info.Name === "tag20" ? (allValues.tag20 = info.Value) : null}
+          {info.Name === "tag21" ? (allValues.tag21 = info.Value) : null}
+          {info.Name === "tag22" ? (allValues.tag22 = info.Value) : null}
+          {info.Name === "tag23" ? (allValues.tag23 = info.Value) : null}
+          {info.Name === "tag24" ? (allValues.tag24 = info.Value) : null}
+
+          {info.Name === "tag25" ? (allValues.tag25 = info.Value) : null}
+          {info.Name === "tag26" ? (allValues.tag26 = info.Value) : null}
+          {info.Name === "tag27" ? (allValues.tag27 = info.Value) : null}
+          {info.Name === "tag28" ? (allValues.tag28 = info.Value) : null}
+
+          {info.Name === "tag29" ? (allValues.tag29 = info.Value) : null}
+
+          {info.Name === "tag30" ? (allValues.tag30 = info.Value) : null}
+          {info.Name === "tag31" ? (allValues.tag31 = info.Value) : null}
+          {info.Name === "tag32" ? (allValues.tag32 = info.Value) : null}
+
+
+        </>
+      );
+    });
+
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     DisplayData();
+  //     console.log('Function called every 10 seconds');
+  //   }, 10000);
+
+  //   return () => clearInterval(intervalId);
+  // }, []);
+
+  DisplayData();
+  const [division, setDivision] = useState("");
+  const [station, setStation] = useState("");
+
+  const stationsByDivision = {
+    KAHRAKMAFF: [
+      "1 - Office",
+      "2 - Guljar Farm",
+      "3 - Chopra Farm",
+      "4 - Khadri",
+      "5 - Kusumkhera-1",
+      "6 - Kusumkhera-2",
+    ],
+    PRATITNAGAR: [
+      "1-Zone-1",
+      "1-Zone-1",
+      "3-Zone-3(I-Well-I)",
+      "3-Zone-3(I-Well-I)",
+      "4-Zone-4",
+      "5-Zone-5",
+    ],
+    NATHUAWALA: [
+      "1 - Zone-1 Gujarowali Office",
+      "2 - Zone-1 Ganesh Vihar",
+      "3 - Zone-2 Khadar-1",
+      "4 - Zone-2 Khadar-2",
+      "5 - Zone-2 Dhobal Chowk",
+      "6 - Zone-3 Bist Atta Chakki",
+      "7 - Madhav Vihar",
+    ],
+  };
+
+  const handleDivisionChange = (event) => {
+    setDivision(event.target.value);
+    setStation("");
+  };
+
+  const divisionOptions = ["KAHRAKMAFF", "PRATITNAGAR", "NATHUAWALA"];
+  const stationOptions = division ? stationsByDivision[division] : [];
 
   return (
     <>
@@ -27,21 +154,27 @@ function Instant() {
         <div className="dropdown-area">
           <div className="division">
             <label for="division">Division :-</label>
-            <select name="division" id="division">
-              <option value="KAHRAKMAFF">KAHRAKMAFF</option>
-              <option value="PRATITNAGAR">PRATITNAGAR</option>
-              <option value="NATHUAWALA">NATHUAWALA</option>
+            <select value={division} onChange={handleDivisionChange}>
+              <option value="">Select Division</option>
+              {divisionOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
             </select>
           </div>
           <div className="instant-station">
             <label for="station">Station Name :-</label>
-            <select name="station" id="station">
-              <option value="1 - Office">1 - Office</option>
-              <option value="2 - Guljar Farm">2 - Guljar Farm</option>
-              <option value="3 - Chopra Farm">3 - Chopra Farm</option>
-              <option value="4 - Khadri">4 - Khadri</option>
-              <option value="5 - Kusumkhera-1">5 - Kusumkhera-1</option>
-              <option value="6 - Kusumkhera-2">6 - Kusumkhera-2</option>
+            <select
+              value={station}
+              onChange={(event) => setStation(event.target.value)}
+            >
+              <option value="">Select Station</option>
+              {stationOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
             </select>
           </div>
           <div className="last-update">
@@ -55,47 +188,43 @@ function Instant() {
               <caption>Electrical Data</caption>
               <tr>
                 <td>Voltage (R-Y)</td>
-                <td>0.0</td>
+                <td>{allValues.tag0}</td>
               </tr>
               <tr>
                 <td>Voltage (Y-B)</td>
-                <td>0.0</td>
+                <td>{allValues.tag1}</td>
               </tr>
               <tr>
                 <td>Voltage (B-R)</td>
-                <td>0.0</td>
+                <td>{allValues.tag2}</td>
               </tr>
               <tr>
                 <td>Current (R-Phase)</td>
-                <td>0.0</td>
+                <td>{allValues.tag3}</td>
               </tr>
               <tr>
                 <td>Current (Y-Phase)</td>
-                <td>0.0</td>
-              </tr>
-              <tr>
-                <td>Current (Y-Phase)</td>
-                <td>0.0</td>
+                <td>{allValues.tag4}</td>
               </tr>
               <tr>
                 <td>Current (B-Phase)</td>
-                <td>0.0</td>
+                <td>{allValues.tag5}</td>
               </tr>
               <tr>
                 <td>Frequency</td>
-                <td>0.0</td>
+                <td>{allValues.tag6}</td>
               </tr>
               <tr>
                 <td>Power Factor</td>
-                <td>0.0</td>
+                <td>{allValues.tag7}</td>
               </tr>
               <tr>
                 <td>Power (K.W.)</td>
-                <td>0.0</td>
+                <td>{allValues.tag8}</td>
               </tr>
               <tr>
                 <td>Energy (Kwh)</td>
-                <td>0.0</td>
+                <td>{allValues.tag9}</td>
               </tr>
             </table>
           </div>
@@ -104,19 +233,19 @@ function Instant() {
               <caption>TubeWell Status</caption>
               <tr>
                 <td>Operating Mode</td>
-                <td>Manual</td>
+                <td>{allValues.tag10}</td>
               </tr>
               <tr>
                 <td>Power on Hours</td>
-                <td>0</td>
+                <td>{allValues.tag11}</td>
               </tr>
               <tr>
                 <td>Pump Status</td>
-                <td>OFF</td>
+                <td>{allValues.tag12}</td>
               </tr>
               <tr>
                 <td>Pump Run Hours</td>
-                <td>0</td>
+                <td>{allValues.tag13}</td>
               </tr>
             </table>
           </div>
@@ -125,23 +254,23 @@ function Instant() {
               <caption>TW Operating Parameter's</caption>
               <tr>
                 <td>Maximum voltage</td>
-                <td>0.0</td>
+                <td>{allValues.tag14}</td>
               </tr>
               <tr>
                 <td>Minimum voltage</td>
-                <td>0.0</td>
+                <td>{allValues.tag15}</td>
               </tr>
               <tr>
                 <td>Maximum current</td>
-                <td>0.0</td>
+                <td>{allValues.tag16}</td>
               </tr>
               <tr>
                 <td>Minimum current</td>
-                <td>0.0</td>
+                <td>{allValues.tag17}</td>
               </tr>
               <tr>
                 <td>Unbalance in currenT</td>
-                <td>0.0</td>
+                <td>{allValues.tag18}</td>
               </tr>
             </table>
           </div>
@@ -150,21 +279,21 @@ function Instant() {
               <caption>Tubewell Operating Schedule</caption>
               <tr>
                 <td>1st On Time</td>
-                <td>0.0</td>
+                <td>{allValues.tag19}</td>
                 <td>1st Off Time</td>
-                <td>0.0</td>
+                <td>{allValues.tag20}</td>
               </tr>
               <tr>
                 <td>2nd On Time</td>
-                <td>0.0</td>
+                <td>{allValues.tag21}</td>
                 <td>2nd Off Time</td>
-                <td>0.0</td>
+                <td>{allValues.tag22}</td>
               </tr>
               <tr>
                 <td>3rd On Time</td>
-                <td>0.0</td>
+                <td>{allValues.tag23}</td>
                 <td>3rd Off Time</td>
-                <td>0.0</td>
+                <td>{allValues.tag24}</td>
               </tr>
             </table>
           </div>
@@ -173,15 +302,15 @@ function Instant() {
               <caption>Process Data</caption>
               <tr>
                 <td>Pump Discharge (m3/h)</td>
-                <td>0.0</td>
+                <td>{allValues.tag25}</td>
                 <td>Pump Total Discharge Today (m3)</td>
-                <td>0.0</td>
+                <td>{allValues.tag26}</td>
               </tr>
               <tr>
                 <td>Tank Discharge (m3/h)</td>
-                <td>0.0</td>
+                <td>{allValues.tag27}</td>
                 <td>Tank Total Discharge Today (m3)</td>
-                <td>0.0</td>
+                <td>{allValues.tag28}</td>
               </tr>
             </table>
           </div>
@@ -189,13 +318,13 @@ function Instant() {
             <table id="Event">
               <tr>
                 <td>Event/Fault Window</td>
-                <td>0.0</td>
+                <td>{allValues.tag29}</td>
               </tr>
             </table>
           </div>
-          <span className="instant-data-point1">{tag}</span>
-          <span className="instant-data-point2">0.0</span>
-          <span className="instant-data-point3">0.0</span>
+          <span className="instant-data-point1">{allValues.tag30}</span>
+          <span className="instant-data-point2">{allValues.tag31}</span>
+          <span className="instant-data-point3">{allValues.tag32}</span>
         </div>
         <div className="instant-btn-group">
           <Link to="/">
