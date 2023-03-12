@@ -5,7 +5,7 @@ import LogBook from '../Component/LogBook/LogBook'
 function FourthPage() {
   return (
     <div>
-      <Default/>
+      {/* <Default/> */}
       <LogBook />
     </div>
   )

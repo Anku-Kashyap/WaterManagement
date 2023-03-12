@@ -150,9 +150,10 @@ function Instant() {
 
   return (
     <>
-      <div className="main-area">
-        <div className="dropdown-area">
-          <div className="division">
+    <div className="Instant-header">
+      <div className="Instant-main-area">
+        <div className="Instant-dropdown-area">
+          <div className="Instant-division">
             <label for="division">Division :-</label>
             <select value={division} onChange={handleDivisionChange}>
               <option value="">Select Division</option>
@@ -340,6 +341,7 @@ function Instant() {
             <button>LogBook</button>
           </Link>
         </div>
+      </div>
       </div>
     </>
   );

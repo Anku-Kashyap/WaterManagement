@@ -1,4 +1,25 @@
-.main-area {
+.header {
+  background-image: url(/src/images/HP2.jpg);
+  background-repeat: repeat-y;
+    background-size: 100%;
+    position:relative;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 150px;
+    transform:scaleY(0.9);
+
+  /* width: 125%;
+  height: 120px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
+  object-fit: cover; */
+}
+
+/* 
+/* .main-area {
     text-align: center;
     width: 130%;
     height: 1106px;
@@ -6,23 +27,37 @@
     background-color: #292C42;
     right: 0px;
     margin-top: 9px;
-  }
-  
+  } */
+   */
 
-.logWise form label:first-child {
+/* .logWise form label:first-child {
     color: White;
     font-size: Larger;
     font-weight: bold;
     border-style: none;
     border-color: inherit;
     border-width: inherit;
-    position: absolute;
-    left: 4px;
-    top: 130px;
+    
+    left: px;
+    top: 0px;
     width: 168px;
     height: 36px;
     padding: 5px;
     
+} */
+
+#logwise-division{
+    font-size: Larger;
+    border-style: solid;
+    border-color: inherit;
+    border-width: inherit;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 80px;
+    height: 20px;
+    margin-left: 50px;
+    border: none;
 }
 
 .logWise select{
@@ -31,8 +66,8 @@
     border-color: inherit;
     border-width: inherit;
     position: absolute;
-    top: 130px;
-    left: 147px;
+    top: 160px;
+    left: 197px;
     width: 342px;
     height: 40px;
     margin-left: 50px;
@@ -43,14 +78,14 @@
 
 .logWise form label {
     color: White;
-    font-size: Larger;
+    font-size:xx-large;
     font-weight: bold;
     border-style: none;
     border-color: inherit;
     border-width: inherit;
     position: absolute;
-    left: 40%;
-    top: 130px;
+    left: 4%;
+    top: 150px;
     width: 168px;
     height: 32px;
     padding: 5px;
@@ -65,8 +100,8 @@
     border-color: inherit;
     border-width: inherit;
     position: absolute;
-    left: 50%;
-    top: 130px;
+    left: 40%;
+    top: 160px;
     width: 168px;
     height: 32px;
     padding: 5px;
@@ -85,8 +120,8 @@
     width: 180px;
     transition: all 0.5s;
     cursor: pointer;
-    margin-top: 20px;
-    margin-left: 200px;
+    margin-top: 160px;
+    margin-left: 55%;
   }
   
   .submit span {

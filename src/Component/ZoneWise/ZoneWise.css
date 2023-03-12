@@ -1,9 +1,23 @@
+.header {
+    background-image: url(/src/images/HP2.jpg);
+    background-repeat: repeat-y;
+      background-size: 100%;
+      position:relative;
+      top: 5px;
+      left: 0px;
+      width: 123%;
+      height: 150px;
+      transform:scaleY(0.8);
+      top: 10px
+  }
+  
+
 .zone-wise-area {
     background-image: url(/src/images/zone-wise-pressure.png);
     background-repeat: no-repeat;
     border-width: 0px;
     position: absolute;
-    top: 110px;
+    top: 150px;
     left: 10px;
     width: 2000px;
     height: 1160px;
@@ -15,7 +29,7 @@
     background-repeat: no-repeat;
     border-width: 0px;
     position: absolute;
-    top: 110px;
+    top: 150px;
     left: 10px;
     width: 2000px;
     height: 1160px;
@@ -27,7 +41,7 @@
     background-repeat: no-repeat;
     border-width: 0px;
     position: absolute;
-    top: 110px;
+    top: 150px;
     left: 10px;
     width: 2000px;
     height: 1160px;

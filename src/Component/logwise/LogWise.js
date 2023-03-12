@@ -4,16 +4,17 @@ import { Link } from "react-router-dom";
 
 function LogWise() {
   return (
-    <div className="main-area">
+    <div className="header">
+    <div className="logWise-main-area">
       <div className="logWise">
         <form>
           <label for="division">Division :-</label>
-          <select name="division" id="division">
+          <select name="division" id="logwise-division">
             <option value="KAHRAKMAFF">KAHRAKMAFF</option>
             <option value="PRATITNAGAR">PRATITNAGAR</option>
             <option value="NATHUAWALA">NATHUAWALA</option>
           </select>
-          <label for="birthday">Date:</label>
+          <label for="birthday"></label>
           <input type="date" id="date" name="date" />
           <button class="submit">
             <span>SUBMIT </span>
@@ -34,6 +35,7 @@ function LogWise() {
           <button>LogBook</button>
         </Link>
       </div>
+    </div>
     </div>
   );
 }

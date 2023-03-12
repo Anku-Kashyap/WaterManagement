@@ -1,20 +1,32 @@
-.main-area {
+.Instant-header {
+  background-image: url(/src/images/HP2.jpg);
+  background-repeat: repeat-y;
+  background-size: 100%;
+  position: relative;
+  top: -100px;
+  left: -90px;
+  width: 130%;
+  height: 150px;
+  transform: scale(0.9);
+}
+
+
+/* .Instant-main-area {
   text-align: center;
   width: 130%;
-  height: 1106px;
+  height: 0px;
   left: 0px;
   background-color: #292C42;
   right: 0px;
   margin-top: 9px;
+} */
+
+.Instant-dropdown-area {
+  margin-top:100px;
+
 }
 
-.dropdown-area {
-  margin-top:20px;
-  
-
-}
-
-.dropdown-area label {
+.Instant-dropdown-area label {
     color: White;
     font-size: Larger;
     font-weight: bold;
@@ -23,20 +35,20 @@
     border-width: inherit;
     position: absolute;
     left: 4px;
-    top: 130px;
+    top: 150px;
     width: 168px;
     height: 32px;
     padding: 5px;
     
 }
 
-.dropdown-area select{
+.Instant-dropdown-area select{
   font-size: Larger;
     border-style: solid;
     border-color: inherit;
     border-width: inherit;
     position: absolute;
-    top: 130px;
+    top: 160px;
     left: 147px;
     width: 342px;
     height: 32px;
@@ -77,7 +89,7 @@
     border-color: inherit;
     border-width: inherit;
     position: absolute;
-    top: 135px;
+    top: 155px;
     left: 286px;
     width: 293px;
     height: 30px;
@@ -97,7 +109,7 @@
   border-color: inherit;
   border-width: inherit;
   position: absolute;
-  top: 135px;
+  top: 155px;
   left: 496px;
   width: 293px;
   height: 30px;
@@ -131,7 +143,7 @@
     border-color: inherit;
     border-width: inherit;
     position: absolute;
-    top: -30px;
+    top: -32px;
     left: -23%;
     width: 370px;
     height: 29px;
@@ -174,7 +186,7 @@
 
 .Tubewell-status{
   margin-left:100px;
-  margin-top:-29%;
+  margin-top:-26%;
 }
 
 .Tubewell-status caption{
@@ -187,7 +199,7 @@
   border-color: inherit;
   border-width: inherit;
   position: absolute;
-  top: -33px;
+  top: -24px;
   left: 100px;
   width: 285px;
   height: 29px;
@@ -197,7 +209,7 @@
 
 .TW {
   margin-left:-370px;
-  margin-top:23%;
+  margin-top:19%;
 }
 
 .TW caption{
@@ -210,7 +222,7 @@
   border-color: inherit;
   border-width: inherit;
   position: absolute;
-  top: 77%;
+  top: 68%;
   left: -370px;
   width: 375px;
   height: 29px;
@@ -219,7 +231,7 @@
 
 .Schedule{
   margin-left:60%;
-  margin-top:-50%;
+  margin-top:-43%;
 }
 
 #Schedule{
@@ -255,7 +267,7 @@
   border-color: inherit;
   border-width: inherit;
   position: absolute;
-  top: -13%;
+  top: -4%;
   left: 60%;;
   width: 575px;
   height: 29px;
@@ -264,7 +276,7 @@
 
 .Process{
   margin-left:27%;
-  margin-top: 19%;
+  margin-top: 15%;
 }
 
 #Process{
@@ -403,7 +415,7 @@
   cursor: pointer;
   float: left; 
   margin-left:20px;
-  margin-top: 50%;
+  margin-top: 52%;
   width:15%;
 }
 

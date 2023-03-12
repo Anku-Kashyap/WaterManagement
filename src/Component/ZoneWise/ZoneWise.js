@@ -1,8 +1,8 @@
 import React from "react";
 import "./ZoneWise.css";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import JsonData from "../Data/data.json";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function ZoneWise() {
   const [allValues, setAllValues] = useState({
@@ -47,41 +47,43 @@ function ZoneWise() {
   DisplayData();
 
   return (
-    <div className="zone-wise-area">
-      <span className="data-point1">{allValues.tag0} m</span>
-      <span className="data-point2">{allValues.tag1} m3</span>
-      <span className="data-point3">{allValues.tag2} m3/h</span>
-      <span className="data-point4">{allValues.tag3} Kg/Cm2</span>
-      <span className="data-point5">{allValues.tag4} m</span>
-      <span className="data-point6">{allValues.tag5} Kg/Cm2</span>
-      <span className="data-point7">{allValues.tag6} Kg/Cm2</span>
-      <span className="data-point8">{allValues.tag7} m3/h</span>
-      <span className="data-point9">{allValues.tag8} m3</span>
-      <span className="data-point10">{allValues.tag9} m</span>
-      <span className="data-point11">{allValues.tag10} Kg/Cm2</span>
-      <span className="data-point12">{allValues.tag11} Kg/Cm2</span>
-      <span className="data-point13">{allValues.tag12} m3/h</span>
-      <span className="data-point14">{allValues.tag13} m3</span>
+    <div className="header">
+      <div className="zone-wise-area">
+        <span className="data-point1">{allValues.tag0} m</span>
+        <span className="data-point2">{allValues.tag1} m3</span>
+        <span className="data-point3">{allValues.tag2} m3/h</span>
+        <span className="data-point4">{allValues.tag3} Kg/Cm2</span>
+        <span className="data-point5">{allValues.tag4} m</span>
+        <span className="data-point6">{allValues.tag5} Kg/Cm2</span>
+        <span className="data-point7">{allValues.tag6} Kg/Cm2</span>
+        <span className="data-point8">{allValues.tag7} m3/h</span>
+        <span className="data-point9">{allValues.tag8} m3</span>
+        <span className="data-point10">{allValues.tag9} m</span>
+        <span className="data-point11">{allValues.tag10} Kg/Cm2</span>
+        <span className="data-point12">{allValues.tag11} Kg/Cm2</span>
+        <span className="data-point13">{allValues.tag12} m3/h</span>
+        <span className="data-point14">{allValues.tag13} m3</span>
 
-      <div className="zonewise-btn-group">
-        <Link to="/second">
-          <button>Instantaneous</button>
-        </Link>
-        <Link to="/">
-          <button>Instantaneous at a glance</button>
-        </Link>
-        <Link to="/third">
-          <button>Log of Pressure</button>
-        </Link>
-        <Link to="/four">
-          <button>LogBook</button>
-        </Link>
-        <Link to="/pratitnagar">
-          <button>Zonewise pressure of Pratitnagar</button>
-        </Link>
-        <Link to="/nathuawala">
-          <button>Zonewise pressure of Nathuawla</button>
-        </Link>
+        <div className="zonewise-btn-group">
+          <Link to="/second">
+            <button>Instantaneous</button>
+          </Link>
+          <Link to="/">
+            <button>Instantaneous at a glance</button>
+          </Link>
+          <Link to="/third">
+            <button>Log of Pressure</button>
+          </Link>
+          <Link to="/four">
+            <button>LogBook</button>
+          </Link>
+          <Link to="/pratitnagar">
+            <button>Zonewise pressure of Pratitnagar</button>
+          </Link>
+          <Link to="/nathuawala">
+            <button>Zonewise pressure of Nathuawla</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

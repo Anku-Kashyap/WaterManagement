@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 
 function LogBook() {
   return (
+
+    <div className="LogBook-header">
     <div className="main-area">
       <div className="logBook">
         <form>
-          <label for="division">Division :-</label>
+          <label for="division">Division </label>
           <select name="division" id="division">
             <option value="KAHRAKMAFF">KAHRAKMAFF</option>
             <option value="PRATITNAGAR">PRATITNAGAR</option>
@@ -46,6 +48,7 @@ function LogBook() {
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 }

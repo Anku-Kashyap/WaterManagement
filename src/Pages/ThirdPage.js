@@ -6,7 +6,8 @@ import LogWise from '../Component/logwise/LogWise';
 
 function ThirdPage() {
   return (
-    <><Default/>
+    <>
+    
     <LogWise />
     </>
     
