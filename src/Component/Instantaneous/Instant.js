@@ -66,7 +66,9 @@ function Instant() {
   });
 
   const DisplayData = (props) =>
+    
     props.map((info) => {
+      console.log(props);
       return (
         <>
           {info.Name === "tag0" ? (allValues.tag0 = info.Value) : null}
@@ -112,8 +114,8 @@ function Instant() {
       );
     });
 
-  const [division, setDivision] = useState("");
-  const [station, setStation] = useState("");
+  const [division, setDivision] = useState("KAHRAKMAFF");
+  const [station, setStation] = useState("1 - Office");
 
   const stationsByDivision = {
     KAHRAKMAFF: [
@@ -151,10 +153,10 @@ function Instant() {
   const divisionOptions = ["KAHRAKMAFF", "PRATITNAGAR", "NATHUAWALA"];
   const stationOptions = division ? stationsByDivision[division] : [];
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
+
       switch (true) {
         case division === "KAHRAKMAFF" && station === "1 - Office":
+          console.log("office")
           DisplayData(JsonData1);
           break;
         case division === "KAHRAKMAFF" && station === "2 - Guljar Farm":
@@ -164,6 +166,7 @@ function Instant() {
           DisplayData(JsonData3);
           break;
         case division === "KAHRAKMAFF" && station === "4 - Khadri":
+          console.log("khadri");
           DisplayData(JsonData4);
           break;
         case division === "KAHRAKMAFF" && station === "5 - Kusumkhera-1":
@@ -216,14 +219,10 @@ function Instant() {
           DisplayData(JsonData19);
           break;
       }
+      
+    
 
-      console.log("Function called every 10 seconds");
-    }, 10000);
-
-    return () => clearInterval(intervalId);
-  }, [station]);
-
-  DisplayData(JsonData1);
+  // DisplayData(JsonData1);
 
   return (
     <>
