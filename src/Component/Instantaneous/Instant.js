@@ -21,7 +21,6 @@ import JsonData17 from "../Data/NATHUAWALA_5-Zone-2DhobalChowk.json";
 import JsonData18 from "../Data/NATHUAWALA_6-Zone-3BistAttaChakki.json";
 import JsonData19 from "../Data/NATHUAWALA_7-MadhavVihar.json";
 
-
 function Instant() {
   const [allValues, setAllValues] = useState({
     tag0: "",
@@ -35,7 +34,7 @@ function Instant() {
     tag8: "",
     tag9: "",
 
-    tag10: "set",
+    tag10: "",
     tag11: "",
     tag12: "",
     tag13: "",
@@ -65,57 +64,47 @@ function Instant() {
     tag32: "",
   });
 
-  const DisplayData = (props) =>
-    
-    props.map((info) => {
-      console.log(props);
-      return (
-        <>
-          {info.Name === "tag0" ? (allValues.tag0 = info.Value) : null}
-          {info.Name === "tag1" ? (allValues.tag1 = info.Value) : null}
-          {info.Name === "tag2" ? (allValues.tag2 = info.Value) : null}
-          {info.Name === "tag3" ? (allValues.tag3 = info.Value) : null}
-          {info.Name === "tag4" ? (allValues.tag4 = info.Value) : null}
-          {info.Name === "tag5" ? (allValues.tag5 = info.Value) : null}
-          {info.Name === "tag6" ? (allValues.tag6 = info.Value) : null}
-          {info.Name === "tag7" ? (allValues.tag7 = info.Value) : null}
-          {info.Name === "tag8" ? (allValues.tag8 = info.Value) : null}
-          {info.Name === "tag9" ? (allValues.tag9 = info.Value) : null}
-
-          {info.Name === "tag10" ? (allValues.tag10 = info.Value) : null}
-          {info.Name === "tag11" ? (allValues.tag11 = info.Value) : null}
-          {info.Name === "tag12" ? (allValues.tag12 = info.Value) : null}
-          {info.Name === "tag13" ? (allValues.tag13 = info.Value) : null}
-
-          {info.Name === "tag14" ? (allValues.tag14 = info.Value) : null}
-          {info.Name === "tag15" ? (allValues.tag15 = info.Value) : null}
-          {info.Name === "tag16" ? (allValues.tag16 = info.Value) : null}
-          {info.Name === "tag17" ? (allValues.tag17 = info.Value) : null}
-          {info.Name === "tag18" ? (allValues.tag18 = info.Value) : null}
-
-          {info.Name === "tag19" ? (allValues.tag19 = info.Value) : null}
-          {info.Name === "tag20" ? (allValues.tag20 = info.Value) : null}
-          {info.Name === "tag21" ? (allValues.tag21 = info.Value) : null}
-          {info.Name === "tag22" ? (allValues.tag22 = info.Value) : null}
-          {info.Name === "tag23" ? (allValues.tag23 = info.Value) : null}
-          {info.Name === "tag24" ? (allValues.tag24 = info.Value) : null}
-
-          {info.Name === "tag25" ? (allValues.tag25 = info.Value) : null}
-          {info.Name === "tag26" ? (allValues.tag26 = info.Value) : null}
-          {info.Name === "tag27" ? (allValues.tag27 = info.Value) : null}
-          {info.Name === "tag28" ? (allValues.tag28 = info.Value) : null}
-
-          {info.Name === "tag29" ? (allValues.tag29 = info.Value) : null}
-
-          {info.Name === "tag30" ? (allValues.tag30 = info.Value) : null}
-          {info.Name === "tag31" ? (allValues.tag31 = info.Value) : null}
-          {info.Name === "tag32" ? (allValues.tag32 = info.Value) : null}
-        </>
-      );
+  const DisplayData = (props) => {
+    console.log(props[0].tag0);
+    setAllValues({
+      tag0: props[0].tag0,
+      tag1: props[0].tag1,
+      tag2: props[0].tag2,
+      tag3: props[0].tag3,
+      tag4: props[0].tag4,
+      tag5: props[0].tag5,
+      tag6: props[0].tag6,
+      tag7: props[0].tag7,
+      tag8: props[0].tag8,
+      tag9: props[0].tag9,
+      tag10: props[0].tag10,
+      tag11: props[0].tag11,
+      tag12: props[0].tag12,
+      tag13: props[0].tag13,
+      tag14: props[0].tag14,
+      tag15: props[0].tag15,
+      tag16: props[0].tag16,
+      tag17: props[0].tag17,
+      tag18: props[0].tag18,
+      tag19: props[0].tag19,
+      tag20: props[0].tag20,
+      tag21: props[0].tag21,
+      tag22: props[0].tag22,
+      tag23: props[0].tag23,
+      tag24: props[0].tag24,
+      tag25: props[0].tag25,
+      tag26: props[0].tag26,
+      tag27: props[0].tag27,
+      tag28: props[0].tag28,
+      tag29: props[0].tag29,
+      tag30: props[0].tag30,
+      tag31: props[0].tag31,
+      tag32: props[0].tag32,
     });
+  };
 
-  const [division, setDivision] = useState("KAHRAKMAFF");
-  const [station, setStation] = useState("1 - Office");
+  const [division, setDivision] = useState("");
+  const [station, setStation] = useState("");
 
   const stationsByDivision = {
     KAHRAKMAFF: [
@@ -128,8 +117,6 @@ function Instant() {
     ],
     PRATITNAGAR: [
       "1-Zone-1",
-      "1-Zone-1",
-      "3-Zone-3(I-Well-I)",
       "3-Zone-3(I-Well-I)",
       "4-Zone-4",
       "5-Zone-5",
@@ -152,75 +139,80 @@ function Instant() {
 
   const divisionOptions = ["KAHRAKMAFF", "PRATITNAGAR", "NATHUAWALA"];
   const stationOptions = division ? stationsByDivision[division] : [];
+  const [data, setData] = useState(JsonData1);
 
+  useEffect(() => {
+    CheckChange();
+  }, [data, division, station]);
 
-      switch (true) {
-        case division === "KAHRAKMAFF" && station === "1 - Office":
-          console.log("office")
-          DisplayData(JsonData1);
-          break;
-        case division === "KAHRAKMAFF" && station === "2 - Guljar Farm":
-          DisplayData(JsonData2);
-          break;
-        case division === "KAHRAKMAFF" && station === "3 - Chopra Farm":
-          DisplayData(JsonData3);
-          break;
-        case division === "KAHRAKMAFF" && station === "4 - Khadri":
-          console.log("khadri");
-          DisplayData(JsonData4);
-          break;
-        case division === "KAHRAKMAFF" && station === "5 - Kusumkhera-1":
-          DisplayData(JsonData5);
-          break;
-        case division === "KAHRAKMAFF" && station === "6 - Kusumkhera-2":
-          DisplayData(JsonData6);
-          break;
+  const CheckChange = () => {
+    switch (true) {
+      case division === "KAHRAKMAFF" && station === "1 - Office":
+        console.log("office");
+        setData(JsonData1);
+        DisplayData(data);
+        break;
+      case division === "KAHRAKMAFF" && station === "2 - Guljar Farm":
+        DisplayData(JsonData2);
+        break;
+      case division === "KAHRAKMAFF" && station === "3 - Chopra Farm":
+        DisplayData(JsonData3);
+        break;
+      case division === "KAHRAKMAFF" && station === "4 - Khadri":
+        console.log("khadri");
+        DisplayData(JsonData4);
+        break;
+      case division === "KAHRAKMAFF" && station === "5 - Kusumkhera-1":
+        DisplayData(JsonData5);
+        break;
+      case division === "KAHRAKMAFF" && station === "6 - Kusumkhera-2":
+        DisplayData(JsonData6);
+        break;
 
-        case division === "PRATITNAGAR" && station === "1-Zone-1":
-          DisplayData(JsonData7);
-          break;
-        case division === "PRATITNAGAR" && station === "1-Zone-1":
-          DisplayData(JsonData8);
-          break;
-        case division === "PRATITNAGAR" && station === "3-Zone-3(I-Well-I)":
-          DisplayData(JsonData9);
-          break;
-        case division === "PRATITNAGAR" && station === "3-Zone-3(I-Well-I)":
-          DisplayData(JsonData10);
-          break;
-        case division === "PRATITNAGAR" && station === "4-Zone-4":
-          DisplayData(JsonData11);
-          break;
-        case division === "PRATITNAGAR" && station === "5-Zone-5":
-          DisplayData(JsonData12);
-          break;
+      case division === "PRATITNAGAR" && station === "1-Zone-1":
+        DisplayData(JsonData7);
+        break;
+      case division === "PRATITNAGAR" && station === "1-Zone-1":
+        DisplayData(JsonData8);
+        break;
+      case division === "PRATITNAGAR" && station === "3-Zone-3(I-Well-I)":
+        DisplayData(JsonData9);
+        break;
+      case division === "PRATITNAGAR" && station === "3-Zone-3(I-Well-I)":
+        DisplayData(JsonData10);
+        break;
+      case division === "PRATITNAGAR" && station === "4-Zone-4":
+        DisplayData(JsonData11);
+        break;
+      case division === "PRATITNAGAR" && station === "5-Zone-5":
+        DisplayData(JsonData12);
+        break;
 
-        case division === "NATHUAWALA" &&
-          station === "1 - Zone-1 Gujarowali Office":
-          DisplayData(JsonData13);
-          break;
-        case division === "NATHUAWALA" && station === "2 - Zone-1 Ganesh Vihar":
-          DisplayData(JsonData14);
-          break;
-        case division === "NATHUAWALA" && station === "3 - Zone-2 Khadar-1":
-          DisplayData(JsonData15);
-          break;
-        case division === "NATHUAWALA" && station === "4 - Zone-2 Khadar-2":
-          DisplayData(JsonData16);
-          break;
-        case division === "NATHUAWALA" && station === "5 - Zone-2 Dhobal Chowk":
-          DisplayData(JsonData17);
-          break;
-        case division === "NATHUAWALA" &&
-          station === "6 - Zone-3 Bist Atta Chakki":
-          DisplayData(JsonData18);
-          break;
-        case division === "NATHUAWALA" && station === "7 - Madhav Vihar":
-          DisplayData(JsonData19);
-          break;
-      }
-      
-    
+      case division === "NATHUAWALA" &&
+        station === "1 - Zone-1 Gujarowali Office":
+        DisplayData(JsonData13);
+        break;
+      case division === "NATHUAWALA" && station === "2 - Zone-1 Ganesh Vihar":
+        DisplayData(JsonData14);
+        break;
+      case division === "NATHUAWALA" && station === "3 - Zone-2 Khadar-1":
+        DisplayData(JsonData15);
+        break;
+      case division === "NATHUAWALA" && station === "4 - Zone-2 Khadar-2":
+        DisplayData(JsonData16);
+        break;
+      case division === "NATHUAWALA" && station === "5 - Zone-2 Dhobal Chowk":
+        DisplayData(JsonData17);
+        break;
+      case division === "NATHUAWALA" &&
+        station === "6 - Zone-3 Bist Atta Chakki":
+        DisplayData(JsonData18);
+        break;
+      case division === "NATHUAWALA" && station === "7 - Madhav Vihar":
+        DisplayData(JsonData19);
+        break;
+    }
+  };
 
   // DisplayData(JsonData1);
 
