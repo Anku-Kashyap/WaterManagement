@@ -1,10 +1,11 @@
 import React from 'react'
-import ZoneWise from '../Component/ZoneWise/ZoneWise'
+import ZoneWiseKahrakmaf from '../Component/ZoneWise/ZoneWiseKahrakmaf'
+
 
 function FirstPage() {
   return (
     <div>
-      <ZoneWise />
+      <ZoneWiseKahrakmaf/>
     </div>
   )
 }

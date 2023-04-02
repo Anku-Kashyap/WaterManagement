@@ -1,10 +1,10 @@
 import React from "react";
 import "./ZoneWise.css";
 import { Link } from "react-router-dom";
-import JsonData from "../Data/data.json";
+import JsonData from "../Data/ZoneWiseKahrakmaf.json";
 import { useState } from "react";
 
-function ZoneWise() {
+function ZoneWiseKahrakmaf() {
   const [allValues, setAllValues] = useState({
     tag0: "",
     tag1: "",
@@ -89,4 +89,4 @@ function ZoneWise() {
   );
 }
 
-export default ZoneWise;
+export default ZoneWiseKahrakmaf;

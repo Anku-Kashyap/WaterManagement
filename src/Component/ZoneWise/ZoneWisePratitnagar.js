@@ -1,7 +1,7 @@
 import React from "react";
 import "./ZoneWise.css";
 import { Outlet, Link } from "react-router-dom";
-import JsonData from "../Data/data.json";
+import JsonData from "../Data/ZoneWisePratitnagar.json";
 import { useState, useEffect } from "react";
 
 function ZoneWisePratitnagar() {

@@ -8,11 +8,11 @@ import JsonData4 from "../Data/KAHRAKMAFF_4-Khadri.json";
 import JsonData5 from "../Data/KAHRAKMAFF_5-Kusumkhera-1.json";
 import JsonData6 from "../Data/KAHRAKMAFF_6-Kusumkhera-2.json";
 import JsonData7 from "../Data/PRATITNAGAR_1-Zone-1.json";
-import JsonData8 from "../Data/PRATITNAGAR_1-Zone-1.json";
+import JsonData8 from "../Data/PRATITNAGAR_2-Zone-2.json";
 import JsonData9 from "../Data/PRATITNAGAR_3-Zone-3(I-Well-I).json";
-import JsonData10 from "../Data/PRATITNAGAR_3-Zone-3(I-Well-I).json";
-import JsonData11 from "../Data/PRATITNAGAR_4-Zone-4.json";
-import JsonData12 from "../Data/PRATITNAGAR_5-Zone-5.json";
+import JsonData10 from "../Data/PRATITNAGAR_4-Zone-3(I-Well-II).json";
+import JsonData11 from "../Data/PRATITNAGAR_5-Zone-4.json";
+import JsonData12 from "../Data/PRATITNAGAR_6-Zone-5.json";
 import JsonData13 from "../Data/NATHUAWALA_1-Zone-1GujarowaliOffice.json";
 import JsonData14 from "../Data/NATHUAWALA_2-Zone-1GaneshVihar.json";
 import JsonData15 from "../Data/NATHUAWALA_3-Zone-2Khadar-1.json";
@@ -64,7 +64,7 @@ function Instant() {
     tag32: "",
   });
 
-  const DisplayData = (props) => {
+  const DisplayData =  (props) => {
     console.log(props[0].tag0);
     setAllValues({
       tag0: props[0].tag0,
@@ -112,14 +112,16 @@ function Instant() {
       "2 - Guljar Farm",
       "3 - Chopra Farm",
       "4 - Khadri",
-      "5 - Kusumkhera-1",
-      "6 - Kusumkhera-2",
+      // "5 - Kusumkhera-1",
+      // "6 - Kusumkhera-2",
     ],
     PRATITNAGAR: [
       "1-Zone-1",
+      "2-Zone-2",
       "3-Zone-3(I-Well-I)",
-      "4-Zone-4",
-      "5-Zone-5",
+      "4-Zone-3(I-Well-II)",
+      "5-Zone-4",
+      "6-Zone-5",
     ],
     NATHUAWALA: [
       "1 - Zone-1 Gujarowali Office",
@@ -143,7 +145,8 @@ function Instant() {
 
   useEffect(() => {
     CheckChange();
-  }, [data, division, station]);
+  }, [division, station]);
+
 
   const CheckChange = () => {
     switch (true) {
